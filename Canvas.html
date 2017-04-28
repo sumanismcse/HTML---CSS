@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#test
+		{
+			width: 100px;
+			height:100px;
+			margin: 100px;
+		}
+	</style>
+	<script type="text/javascript">
+		function drawshape()
+		{
+			//get the canvas element using the DOM
+			var canvas= document.getElementById('mycanvas');
+			//use getcontext to use the canvas for drawing
+			var ctx = canvas.getcontext('2d');
+			//Create a pattern
+			for (var i = 0; i < 7; i++)
+			{
+				for(var j=0;j<7;j++)
+				{
+					ctx.fillStyle='rgb('+Math.floor(255-20.5*i)+','+Math.floor(255-42.5*j)+',255';
+					ctx.fillrect(j*25,i*25,55,55);
+				}
+			}
+		}
+		</script>
+		</head>
+		<body id='test' onload="drawshape();">
+			</br></br>
+		<canvas id="mycanvas"></canvas>
+		</body>
+		</html>
